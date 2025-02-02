@@ -33,4 +33,22 @@ class CalculatorTest {
 
     }
 
+    @Test
+    void addStringTest(){
+
+        assertEquals(6, c.add("1,2,3"));
+        assertEquals(0, c.add(""));
+        assertEquals(10, c.add("2,3,5"));
+
+    }
+
+    @Test
+    void addArrayTest(){
+
+        assertEquals(6, c.add(new int[]{1,2,3}));
+        assertEquals(0, c.add(new int[]{}));
+        assertEquals(15, c.add(new int[]{5,5,5}));
+
+    }
+
 }
